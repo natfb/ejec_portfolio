@@ -231,6 +231,9 @@ footer{
 
 /*-------media-query-mobile------------------------*/
 @media (max-width: 500px) {
+    #nav{
+        width: 100vw;
+    }
     .name{
         width: 100vw;
         text-align: center;
