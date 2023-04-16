@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Karla:wght@500&family=Raleway:wght@300;800&display=swap');
+
 html, body{
-    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,63 +12,38 @@ body{
     color: #fff;
     font-size: 16px;
 }
-.button{
-    transform: rotate(90deg);
-}
-.box{
-    width: 40vw;
-    height: auto;
-    margin-top: 1rem;
-    border: solid 1px transparent;
-    border-radius: 28px;
-    padding: 0.4rem 0rem 0rem 7rem;
-    text-align: left;
-    font-family: 'Inconsolata', sans-serif;
-    line-height: 2rem;
-    font-size: 1.1em;
-}
-.box h1{
-    font-family: 'Karla', sans-serif;
-    line-height: 3rem;
-    background: #7B27CF;
-    background: linear-gradient(to right, #7B27CF 0%, #25CFCF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
+/*-----menu---------------------------------------*/
 nav{
     list-style: none;
 }
 #nav{
-    width: 100vw;
-    display: inline-flex;
+    width: 90vw;
+    display: flex;
     justify-content: end;
+    align-items: end;
+    text-align: center;
     margin-right: 5rem;
-    padding: 1rem 0rem 0rem 0rem;
+    padding: 1rem 5rem 0rem 0rem;
 }
-.social{
+.menuImg{
     width: 25px;
     border: solid 1px transparent;
     padding: 1rem 1rem;
     margin: 0rem 0rem;
     filter: invert();
-    -webkit-box-shadow: 40px 40px 61px 13px rgba(0,0,0, 0.1);
-    -moz-box-shadow: 40px 40px 61px 13px rgba(0,0,0, 0.1);
-    box-shadow: 40px 40px 61px 13px rgba(238, 238, 238, 0.1);
 }
+
+/*---------------scroll button-------------------------*/
+.button{
+    transform: rotate(90deg);
+}
+
+/*----------pagina-inicial-------------------------------*/
 .name{
     font-family: 'Karla', sans-serif;
     padding: 5rem 0rem 0rem 7rem;
     font-size: 0.7rem;
-}
-.picture{
-    width: 100%;
-    height: auto;
-    grid-column: 2;
-    padding-left: 1rem;
-    filter: invert();
-}
-.pic{
-    width: 40vw;
 }
 .hero{
     max-width: 100vw;
@@ -76,35 +52,37 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.stack{
-    width: 100vw;
-    margin: 5rem 0rem 0rem;
+.box h1{
+    font-family: 'Karla', sans-serif;
+    line-height: 3rem;
+    background: #7B27CF;
+    background: linear-gradient(to right, #7B27CF 0%, #25CFCF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+}
+.box{
+    width: 40vw;
+    height: auto;
+    font-family: 'Inconsolata', sans-serif;
+    line-height: 2rem;
+    font-size: 1.1em;
     text-align: left;
+    margin-top: 1rem;
+    padding: 0.4rem 0rem 0rem 7rem;    
+}
+.pic{
+    width: 40vw;
+}
+.picture{
+    width: 100%;
+    height: auto;
+    grid-column: 2;
+    padding-left: 1rem;
     filter: invert();
-    animation: move-left 10s linear infinite;
 }
-.stack2{
-    width: 100vw;
-    display: inline-flex;
-    margin: 5rem 0rem 5rem;
-    text-align: center;
-    filter: invert();
-}
-.stack3{
-    width: 100vw;
-    margin: 0rem 0rem 8rem;
-    text-align: left;
-    filter: invert();
-    animation: move-right 10s linear infinite;
-    transition-delay: 1s;
-}
-.stack:hover, .stack3:hover{
-    animation-play-state: paused;
-}
-.stackImg{
-    width: 50px;
-    margin: 0rem 5rem;
-}
+
+/*------second-page-------------------------------------------*/
 .secpage{
     margin-top: 15rem;
 }
@@ -131,69 +109,29 @@ nav{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-/*---footer-----------------------------------*/
-footer{
-    display: inline-flex;
+
+/*--------stack-animation----------------------*/
+.stack{
     width: 100vw;
-    text-align: center;
-    align-items: center;
-    font-family: 'Karla', sans-serif;
-    justify-content: center;
+    margin: 4rem 0rem 0rem;
+    text-align: left;
+    filter: invert();
+    animation: move-left 10s linear infinite;
 }
-#navFooter{
-    display: inline-flex;
-    width: fit-content;
-    padding-left: 3rem;
+.stack3{
+    width: 100vw;
+    margin: 0rem 0rem 8rem;
+    text-align: left;
+    filter: invert();
+    animation: move-right 10s linear infinite;
 }
-/*----hover effect---------*/
-.container {
-    position: relative;
-    width: 50%;
+.stack:hover, .stack3:hover{
+    animation-play-state: paused;
 }
-  
-.image {
-    display: block;
-    width: 100%;
-    height: auto;
+.stackImg{
+    width: 50px;
+    margin: 0rem 5rem;
 }
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    border: solid 1px transparent;
-    border-radius: 5px;
-    transition: .5s ease;
-    background-color: #fff;
-}
-
-.container:hover .overlay {
-    opacity: 1;
-}
-  
-.text {
-    color: rgb(0, 0, 0);
-    font-size: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Karla', sans-serif;
-    font-weight: bold;
-    background: #7B27CF;
-    background: linear-gradient(to right, #7bcf27 0%, #cf2525 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 @keyframes move-right {
     from {
       transform: translateX(-60%);
@@ -210,11 +148,102 @@ footer{
       transform: translateX(-60%);
     }
 }
+
+/*---------------------stack-static-------------------*/
+.stack2{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 0;
+    filter: invert();
+}
+.stackImg2{
+    width: 40px;
+    margin: 0rem 1rem;
+    background-color: rgb(224, 224, 224);
+    border: solid 1px transparent;
+    border-radius: 28px;
+    padding: 1rem;
+}
+/*-------stack-static-hover-effect-----------------------*/
+.container {
+    position: relative;
+    width: 50%;
+}  
+.image{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    transition: .5s ease;
+    background-color: #fff;
+}
+.container:hover .overlay{
+    opacity: 1;
+}
+.text{
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    background: #7B27CF;
+    background: linear-gradient(to right, #7bcf27 0%, #cf2525 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*---footer-----------------------------------*/
+footer{
+    display: inline-flex;
+    width: 100vw;
+    background: #161616;
+    text-align: center;
+    align-items: center;
+    font-family: 'Karla', sans-serif;
+    justify-content: center;
+}
+#navFooter{
+    display: inline-flex;
+    width: fit-content;
+    padding-left: 3rem;
+}
+
+/*-------media-query-mobile------------------------*/
 @media (max-width: 500px) {
     .name{
-        width: 100%;
+        width: 100vw;
         text-align: center;
         padding: 3rem 0rem 0rem 0rem;
+    }
+    .hero{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
     }
     .box{
         width: 80vw;
@@ -226,27 +255,24 @@ footer{
         font-size: 1.5rem;
         line-height: 2rem;
     }
-    .hero{
-        width: 100%;
-        height: auto;
-        display: grid;
-        margin: 0;
-        padding: 0;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-items: center;
-    }
-    .box2{
-        margin-top: 0rem;
+    .box p{
+        line-height: 1.7rem;
     }
     .pic{
         width: 100vw;
         text-align: center;
     }
     .picture{
-        width: 70vw;
+        width: 80vw;
         padding: 0;
         margin: 0;
+    }
+    .box2{
+        margin-top: 0rem;
+    }
+    .box2 p{
+        font-size: 1.0rem;
+        padding: 0rem 2rem;
     }
     .secpage{
         margin: 4rem 0rem;
@@ -255,12 +281,13 @@ footer{
         width: 40px;
         margin: 0rem 1rem;
     }
+    .stackImg2{
+        width: 40px;
+        margin: 0rem 1rem;
+        padding: 1rem;
+    }
     .stack3{
         margin-bottom: 8rem;
-    }
-    .box2 p{
-        font-size: 1.0rem;
-        padding: 0rem 2rem;
     }
     footer{
         font-size: 0.8em;
